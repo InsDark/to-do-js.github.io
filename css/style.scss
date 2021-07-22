@@ -19,6 +19,7 @@ body{
         display: flex;
         font-family: $title-font;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         box-shadow: 1px 1px 1rem black;
         margin-bottom: 1rem;
@@ -43,7 +44,10 @@ body{
             font-size: 30px;
             &:hover{
                 cursor: pointer;
-                color: rgb(235, 173, 59);
+                border: 1px solid $main-color;
+                color: white;
+                background-color: $main-color;
+                border-radius: 1rem;
             }
         }
     }
