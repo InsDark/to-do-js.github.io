@@ -88,8 +88,4 @@ if (nday === 1) {
     nday = 'Sunday';
 }
 
-console.log(month)
-console.log(day)
-console.log(nday)
-
 today.textContent = `${nday}, ${day} ${month}`; 
