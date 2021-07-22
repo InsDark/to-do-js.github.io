@@ -5,9 +5,9 @@ let allTasks = document.querySelector('.allTasks');
 btn.addEventListener('click', () =>{
     if (taskName.value === '' || taskName.value === ' '){
         alert('Please write something to-do')
-    } else if (taskName.value.length >= 15){
+    } else if (taskName.value.length >= 40){
         let amount = taskName.value.length;
-        alert('Please write less than 15 characters' + `your task have ${amount} characters`)
+        alert('Please write less than 40 characters' + `your task have ${amount} characters`)
     } else{
         let txt = taskName.value;
         taskName.value = '';
