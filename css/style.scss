@@ -1,36 +1,49 @@
+$main-color: orange;
+$secondary-color: grey;
+$title-font: 'Oswald', sans-serif ;
+$text-font: 'Open Sans', sans-serif ;
 body{
     margin: 0;
     padding:0;
-    background-color: rgb(3, 187, 3);
+    background-color: $main-color   ;
 }
 
 .app{
     background-color: white;
-    width: 20vw;
+    width: 80vw;
     height: auto;
-    border-radius: 3rem;
     padding: 3rem 3rem;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    .nav{
+        display: flex;
+        font-family: $title-font;
+        align-items: center;
+        justify-content: space-evenly;
+        box-shadow: 1px 1px 1rem black;
+        margin-bottom: 1rem;
+    }
     .task{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding: .5rem 0;
         align-items: center;
         input{
             padding: .5rem;
-            border: none;
-            background-color: rgba(128, 128, 128, 0.2);
+            border: 1px solid $main-color;
+            width: 90%;
+            height: 2rem;
+            font-size: 20px;
             &:hover{
                 cursor: pointer;
             }
         }
         i{
-            color: green;
-            font-size: 22px;
+            color: $main-color;
+            font-size: 30px;
             &:hover{
                 cursor: pointer;
-                color: rgb(1, 85, 1);
+                color: rgb(235, 173, 59);
             }
         }
     }
@@ -42,27 +55,33 @@ body{
             align-items: center;
             padding: .5rem;
             border-radius: .5rem;
+            #h2{
+                font-size:1.3rem;
+                width: 100%;
+                margin-left: 1rem;
+            }
             .check, .fa-check-circle{
-                color: gray;
+                color:$secondary-color;
                 font-size: 25px;
                 &:hover{
-                    color: rgb(6, 172, 116);
+                    color: $main-color;
                     cursor: pointer;
                 }
             }
             .fa-check-circle{
-                color: green;
+                color: $main-color;
             }
             h2{
                 font-size: 16px;
                 font-family: arial,sans-serif;
             }
             .done{
-                color: grey;
+                color: $secondary-color;
                 text-decoration: line-through;
             }
             .fa-trash-alt{
-                color: gray;
+                color: $secondary-color;
+                font-size: 20px;
                 &:hover{
                     color: rgb(219, 3, 3);
                     cursor: pointer;
