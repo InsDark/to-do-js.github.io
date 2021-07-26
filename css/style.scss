@@ -2,6 +2,7 @@ $main-color: orange;
 $secondary-color: grey;
 $title-font: 'Oswald', sans-serif ;
 $text-font: 'Open Sans', sans-serif ;
+
 body{
     margin: 0;
     padding:0;
@@ -27,7 +28,7 @@ body{
     }
     .task{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         padding: .5rem 0;
         align-items: center;
         input{

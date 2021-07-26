@@ -7,7 +7,7 @@ btn.addEventListener('click', () =>{
         alert('Please write something to-do')
     } else if (taskName.value.length >= 40){
         let amount = taskName.value.length;
-        alert('Please write less than 40 characters' + `your task have ${amount} characters`)
+        alert(`Please write less than 40 characters, your task have ${amount} characters`)
     } else{
         let txt = taskName.value;
         taskName.value = '';
@@ -32,60 +32,22 @@ btn.addEventListener('click', () =>{
     }
 })
 
+//Listen the enter button to add a task
 document.body.addEventListener('keydown', function (e) {
     if (e.keyCode === 13) {
       btn.click();
     }
 });
 
-let today = document.querySelector('#day');
+//Get the current day and print it on the main page
+const currentDay = document.querySelector('#day');
 
-let date = new Date();
-let month = date.getMonth() + 1;
-let day = date.getDate();
-let nday = date.getDay();
+const newDate = new Date();
+let month = newDate.getMonth();
+let dayNumber = newDate.getDate();
+let day = newDate.getDay();
 
-if (month === 1) {
-    month = 'January';
-} else if (month === 2) {
-    month = 'Febrary';
-} else if (month === 3) {
-    month = 'March';
-} else if (month === 4) {
-    month = 'April';
-} else if (month === 5) {
-    month = 'May';
-} else if (month === 6) {
-    month = 'June';
-} else if (month === 7) {
-    month = 'July';
-} else if (month === 8) {
-    month = 'August';
-} else if (month === 9) {
-    month = 'September';
-} else if (month === 10) {
-    month = 'October;'
-} else if (month === 11) {
-    month = 'November';
-} else {
-    month = 'December';
-}
+let days = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-
-if (nday === 1) {
-    nday = 'Monday';
-} else if (nday === 2){
-    nday = 'Tuesday';
-} else if (nday === 3){
-    nday = 'Wednesday';
-} else if (nday === 4){
-    nday = 'Thursday';
-} else if (nday === 5){
-    nday = 'Friday';
-} else if (nday === 6){
-    nday = 'Saturday';
-} else {
-    nday = 'Sunday';
-}
-
-today.textContent = `${nday}, ${day} ${month}`; 
+currentDay.textContent = `${days[day]}, ${dayNumber} ${months[month]}`; 
