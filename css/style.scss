@@ -1,131 +1,101 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-}
+$main-color: orange;
+$secondary-color: grey;
+$title-font: 'Oswald', sans-serif ;
+$text-font: 'Open Sans', sans-serif ;
 
 body{
     margin: 0;
-    padding: 0;
-    background-color: #0A1D32;
-    color: white;
+    padding:0;
+    background-color: $main-color   ;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    font-size: 1.5rem;
-    padding: 1rem;
-    gap: 1rem;
-    h1{
-        font-weight: normal;
-        font-style: normal;
-
-    }
-    .current-horary{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 1rem;
-    }
-}
-
-#todo-form{
-    display: grid;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1.5rem;
-    align-items: center;
-    padding: 1rem;
-    grid-template-columns: repeat(2, 10rem);
-    grid-auto-rows: repeat(3, 1fr);
-    input{
-        border: none;
-        width:auto;
-        padding: .5rem;
-        &:focus{
-            border: none;
-            background-color: rgb(1, 54, 1);
-            color: white;
-        }
-    }
-    button{
-        grid-column: span 2;
-        border: none;
-        padding: .5rem;
-        color: black;
-        cursor: pointer;
-        &:hover{
-            background-color: green;
-            color: white;
-        }
-    }
-}
-
-.todo-list{
+.app{
+    background-color: white;
+    width: 80vw;
+    height: auto;
+    padding: 3rem 3rem;
     margin: 0 auto;
-    display: grid;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-    h2{
-        letter-spacing: 1rem;
-        text-align: center;
-    }
-    .todo-item{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    .nav{
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        font-family: $title-font;
         align-items: center;
-        gap: 1rem;
-        font-size: 1.5rem;
-        padding: 1rem;
-        width: 100%;
-        border-radius: .5rem;
-        &:hover{
-            box-shadow: 1px 1px 10px white;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        box-shadow: 1px 1px 1rem black;
+        margin-bottom: 1rem;
+    }
+    .task{
+        display: flex;
+        justify-content: space-around;
+        padding: .5rem 0;
+        align-items: center;
+        input{
+            padding: .5rem;
+            border: 1px solid $main-color;
+            width: 90%;
+            height: 2rem;
+            font-size: 20px;
+            &:hover{
+                cursor: pointer;
+            }
         }
-        .fa-circle{
-            cursor: pointer;
-        }
-        .fa-trash{
-            color: red;
-            cursor: pointer;
-            // &:hover{
-            //     transform: scale(105%);
-            // }
-        }
-        .fa-play{
-            cursor: pointer;
-            color: rgb(0, 255, 0);
-            // &:hover{
-            //     transition: .5s ease;
-            //     transform: scale(110%);
-            // }
+        i{
+            color: $main-color;
+            font-size: 30px;
+            &:hover{
+                cursor: pointer;
+                border: 1px solid $main-color;
+                color: white;
+                background-color: $main-color;
+                border-radius: 1rem;
+            }
         }
     }
-}
-
-.pomodoro-todo {
-    color: black;
-    padding: 1rem;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(233, 233, 233, 0.603);
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    .pomodoro-time{
-        font-size: 3rem;
-    }
-    .pomodoro-quote, .pomodoro-title{
-        font-size: 1.5rem;
+    .allTasks{
+        padding: 1.5rem .0;
+        .taskItem{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5rem;
+            border-radius: .5rem;
+            #h2{
+                font-size:1.3rem;
+                width: 100%;
+                margin-left: 1rem;
+            }
+            .check, .fa-check-circle{
+                color:$secondary-color;
+                font-size: 25px;
+                &:hover{
+                    color: $main-color;
+                    cursor: pointer;
+                }
+            }
+            .fa-check-circle{
+                color: $main-color;
+            }
+            h2{
+                font-size: 16px;
+                font-family: arial,sans-serif;
+            }
+            .done{
+                color: $secondary-color;
+                text-decoration: line-through;
+            }
+            .fa-trash-alt{
+                color: $secondary-color;
+                font-size: 20px;
+                &:hover{
+                    color: rgb(219, 3, 3);
+                    cursor: pointer;
+                }
+            }
+            &:hover{
+                background-color: rgba(128, 128, 128, 0.1);
+            }
+        }
     }
 }

@@ -4,41 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b8ffa0db99.js" crossorigin="anonymous"></script>
-    <title>Pomodoro App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>To-Do Mobile App</title>
 </head>
 <body>
-    <nav>
-        <h1>Pomodoro App</h1>
-        <div class="current-horary">
-            <span class="current-date">Day, numberDay Month</span>
-            <span class="current-time">00:00</span>
+    <div class="app">
+        <div class="nav">
+            <h1>To-Do App</h1>
+            <h2 id='day'>Monday, 3 Dec</h2>
         </div>
-    </nav>
-    <form id="todo-form">
-        <label>Todo Name:</label>
-        <input type="text" required maxlength="16" class='form-todo-name' placeholder='Add something todo'>
-        <label>Todo Time:</label>
-        <input type="text" required maxlength="2" class='form-todo-time' placeholder='Set the minutes'>
-        <button>Add Task</button>
-    </form>
-    <div class="todo-list">
-        <h2>TO-DO List</h2>
-        <div class="todo-item">
-            <i class="fas fa-trash"></i>
-            <span class="todo-name">Task Example</span>
-            <span class="todo-time">5</span>
-            <i class="fas fa-play"></i>
+        <div class="task">
+            <input type="text" id="taskName" placeholder="Write Something here...">
+            <i class="fas fa-plus-circle addTask"></i>
+        </div>
+        <div class="allTasks"> 
         </div>
     </div>
-    <div class="pomodoro-todo">
-        <h3 class="pomodoro-quote">You can do this</h3>
-        <h4 class="pomodoro-time">00:00</h4>
-        <h3 class="pomodoro-title"></h3>
-    </div>
-    <script src="app/date.js"></script>
-    <script src="app/todo.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
